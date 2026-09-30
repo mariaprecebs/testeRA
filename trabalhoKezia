@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="utf-8">
+<title>Realidade Virtual - Museu Jacinto de Souza</title>
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin: 0px; overflow: hidden">
+<a-scene vr-mode-ui="enabled: false" embedded arjs="debugUIEnabled: false">
+<a-assets>
+<!--anjo/modelo 3D-->
+<a-asset-item id="anjo" src="anjo.glb"></a-asset-item>
+
+<!--pintor_e_a_musa/vídeo-->
+<video id="cafe" src="fumaca.mp4" autoplay loop muted playsinline webkit-playsinline></video>
+</a-assets>
+
+<!--marcador do anjo/modelo 3D-->
+<a-marker type="pattern" url="pattern-marcador-anjo.patt">
+<a-entity
+id="estrela"
+position="0 0 0.5"
+rotation="-90 0 0"
+scale="0.05 0.05 0.05"
+gltf-model="#anjo">
+</a-entity>
+</a-marker>
+
+<!--marcador do pintor_e_a_musa/vídeo-->
+<a-marker type="pattern" url="coffe.patt">
+<a-video
+width="3"
+height="2"
+rotation="-90 0 0"
+position="0 0 0" src="#cafe">
+</a-video>
+</a-marker>
+
+<a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
