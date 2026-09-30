@@ -15,7 +15,7 @@
 <a-asset-item id="anjo" src="anjo.glb"></a-asset-item>
 
 <!--pintor_e_a_musa/vídeo-->
-<video id="cafe" src="fumaca.mp4" autoplay loop muted playsinline webkit-playsinline></video>
+<video id="cafe" src="cafe.mp4" autoplay loop muted playsinline webkit-playsinline></video>
 </a-assets>
 
 <!--marcador do anjo/modelo 3D-->
